@@ -1,110 +1,68 @@
 name: BXBan
-version: '${version}'
-main: com.bxstudio.bxban.BXBanPlugin
-api-version: '1.21'
-author: 'BX Studio'
-description: 'Türkçe ceza ve moderasyon sistemi.'
-website: 'https://modrinth.com/'
-softdepend: [PlaceholderAPI]
+version: 1.0.0
+main: com.furkgame.bxban.BXBan
+author: Furkan Game
+description: Türkçe, hafif ve özelleştirilebilir ceza yönetim eklentisi.
+website: https://modrinth.com/
 commands:
   ban:
     description: Oyuncuyu kalıcı olarak yasaklar.
     usage: /ban <oyuncu> <sebep>
-    permission: bxban.ban
     aliases: [yasakla]
   tempban:
     description: Oyuncuyu süreli olarak yasaklar.
     usage: /tempban <oyuncu> <süre> <sebep>
-    permission: bxban.tempban
-    aliases: [sureliyasakla]
+    aliases: [geciciyasakla]
   unban:
     description: Oyuncunun yasağını kaldırır.
     usage: /unban <oyuncu>
-    permission: bxban.unban
     aliases: [yasakkaldir]
   banip:
-    description: Bir IP adresini yasaklar.
-    usage: /banip <ip> <sebep>
-    permission: bxban.banip
+    description: Oyuncunun IP adresini yasaklar.
+    usage: /banip <oyuncu> <sebep>
     aliases: [ipyasakla]
   unbanip:
-    description: Bir IP yasağını kaldırır.
+    description: IP yasağını kaldırır.
     usage: /unbanip <ip>
-    permission: bxban.unbanip
     aliases: [ipyasakkaldir]
   kick:
     description: Oyuncuyu sunucudan atar.
-    usage: /kick <oyuncu> [sebep]
-    permission: bxban.kick
+    usage: /kick <oyuncu> <sebep>
     aliases: [at]
-  warn:
-    description: Oyuncuya uyarı verir.
-    usage: /warn <oyuncu> <sebep>
-    permission: bxban.warn
-    aliases: [uyar]
   mute:
-    description: Oyuncunun sohbetini susturur.
-    usage: /mute <oyuncu> <süre> <sebep>
-    permission: bxban.mute
+    description: Oyuncuyu susturur.
+    usage: /mute <oyuncu> <süre|kalıcı> <sebep>
     aliases: [sustur]
   unmute:
     description: Oyuncunun susturmasını kaldırır.
     usage: /unmute <oyuncu>
-    permission: bxban.unmute
     aliases: [susturmayikaldir]
+  warn:
+    description: Oyuncuya uyarı verir.
+    usage: /warn <oyuncu> <sebep>
+    aliases: [uyar]
   history:
     description: Oyuncunun ceza geçmişini gösterir.
     usage: /history <oyuncu>
-    permission: bxban.history
     aliases: [gecmis]
   banlist:
     description: Aktif yasakları listeler.
     usage: /banlist
-    permission: bxban.banlist
-    aliases: [yasaklistesi]
+    aliases: [yasaklilar]
   bxban:
     description: BXBan yönetim komutları.
     usage: /bxban reload
-    permission: bxban.admin
     aliases: [bx]
 permissions:
-  bxban.*:
-    description: BXBan üzerindeki tüm yetkiler.
-    default: op
-    children:
-      bxban.ban: true
-      bxban.tempban: true
-      bxban.unban: true
-      bxban.banip: true
-      bxban.unbanip: true
-      bxban.kick: true
-      bxban.warn: true
-      bxban.mute: true
-      bxban.unmute: true
-      bxban.history: true
-      bxban.banlist: true
-      bxban.admin: true
-  bxban.ban:
-    default: op
-  bxban.tempban:
-    default: op
-  bxban.unban:
-    default: op
-  bxban.banip:
-    default: op
-  bxban.unbanip:
-    default: op
-  bxban.kick:
-    default: op
-  bxban.warn:
-    default: op
-  bxban.mute:
-    default: op
-  bxban.unmute:
-    default: op
-  bxban.history:
-    default: op
-  bxban.banlist:
-    default: op
-  bxban.admin:
-    default: op
+  bxban.ban: {default: op}
+  bxban.tempban: {default: op}
+  bxban.unban: {default: op}
+  bxban.banip: {default: op}
+  bxban.unbanip: {default: op}
+  bxban.kick: {default: op}
+  bxban.mute: {default: op}
+  bxban.unmute: {default: op}
+  bxban.warn: {default: op}
+  bxban.history: {default: op}
+  bxban.banlist: {default: op}
+  bxban.reload: {default: op}
