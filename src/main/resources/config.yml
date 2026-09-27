@@ -1,24 +1,27 @@
-# BXBan - Türkçe ceza sistemi
-server-name: 'BX Studio'
-appeal-url: 'https://example.com/itiraz'
-discord-url: 'https://discord.gg/ornek'
-
+prefix: "&8[&cBXBan&8] &r"
+settings:
+  protect-operators: true
+  max-reason-length: 120
+  notify-staff: true
+  save-on-every-change: true
 ban-screen:
   enabled: true
   lines:
-    - ''
-    - '&c&l⛔ YASAKLANDINIZ'
-    - ''
-    - '&7Sunucu: &f%server%'
-    - '&7Sebep: &f%reason%'
-    - '&7Süre: &f%duration%'
-    - '&7Yetkili: &f%staff%'
-    - ''
-    - '&7Yasağın süresi dolduğunda tekrar giriş yapabilirsiniz.'
-    - '&7İtiraz: &b%appeal%'
-    - '&7Discord: &b%discord%'
-    - ''
-    - '&8Ceza ID: %id%'
-
-messages:
-  prefix: '&8[&cBXBan&8] &7'
+    - ""
+    - "&c&l━━━━━━━━━━━━━━━━━━━━"
+    - "&c&l       YASAKLANDINIZ"
+    - "&c&l━━━━━━━━━━━━━━━━━━━━"
+    - ""
+    - "&7Sunucu: &fBX Studio"
+    - "&7Sebep: &f%reason%"
+    - "&7Süre: &f%duration%"
+    - "&7Yetkili: &f%operator%"
+    - "&7Ceza ID: &f%id%"
+    - ""
+    - "&eİtiraz: &fexample.com/itiraz"
+    - "&bDiscord: &fdiscord.gg/ornek"
+    - ""
+    - "&c&l━━━━━━━━━━━━━━━━━━━━"
+  permanent-duration: "Kalıcı"
+  expired-duration: "Süre doldu"
+  date-format: "dd.MM.yyyy HH:mm"
